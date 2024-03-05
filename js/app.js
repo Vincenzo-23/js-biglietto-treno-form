@@ -41,15 +41,71 @@
 
 
 
-// far si che i dati non arrivino da un promp ma dagli input
+
+
+// far si che i dati non arrivino da un prompt ma dagli input
 
 // dichiaro gli elementi input
 
-const inputKmElement = document.getElementById("km")
+const inputKmElement = document.getElementById("km") // Element || null
 console.log(inputKmElement)
 
-const inputAgeElement = document.getElementById("age")
+const inputAgeElement = document.getElementById("age") // Element || null
 console.log(inputAgeElement)
 
-const inputSubmitElement = document.getElementById("submit")
+const inputSubmitElement = document.getElementById("submit") // Element || null
 console.log(inputSubmitElement)
+
+
+// aggiungo il listener del click sul pulsante 
+inputSubmitElement.addEventListener("click", function(){
+
+// età del passeggero
+
+    let age = inputAgeElement.value
+
+// km da percorrere
+
+    let km = inputKmElement.value
+
+
+// costo del biglietto senza sconto
+
+    let initialCost = 0.21 * parseFloat(km) //number
+    console.log("Il costo intero del biglietto è di € " + initialCost.toFixed(2))
+
+
+// costo del biglietto con ipotetico sconto
+
+// prezzo con sconto del 20% per i minorenni
+    if(age < 18){
+        let discount = initialCost*0.20 //number
+        console.log("Lo sconto applicato è di € " + discount.toFixed(2))
+        let finalCost = initialCost-discount //number
+        console.log("Il costo del biglietto, con sconto applicato è di €" + finalCost.toFixed(2))
+     
+    }
+    
+// prezzo con nessuno sconto tra i 18 ed i 65 anni
+    else if (age >= 18 && age <= 65){
+        console.log("Il costo del biglietto è di €" + initialCost.toFixed(2))
+    }
+    
+    
+    
+// prezzo con sconto del 40% per gli over 65
+    
+    else{
+        discount = initialCost*0.40 //number
+        console.log("Lo sconto applicato è di € " + discount.toFixed(2))
+        finalCost = initialCost-discount //number
+        console.log("Il costo del biglietto, con sconto applicato è di €" + finalCost.toFixed(2))
+     
+    }
+
+})
+
+
+
+
+
