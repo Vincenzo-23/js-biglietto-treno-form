@@ -69,7 +69,7 @@ inputSubmitElement.addEventListener("click", function(){
     let km = inputKmElement.value
 
 
-// costo del biglietto senza sconto
+// costo del biglietto senza sconto per le persone di età compresa tra i 18 ed i 65 anni
 
     let initialCost = 0.21 * parseFloat(km) //number
     console.log("Il costo intero del biglietto è di € " + initialCost.toFixed(2))
@@ -82,24 +82,18 @@ inputSubmitElement.addEventListener("click", function(){
         let discount = initialCost*0.20 //number
         console.log("Lo sconto applicato è di € " + discount.toFixed(2))
         let finalCost = initialCost-discount //number
-        console.log("Il costo del biglietto, con sconto applicato è di €" + finalCost.toFixed(2))
+        console.log("Il costo del biglietto, con sconto applicato, è di €" + finalCost.toFixed(2))
      
     }
-    
-// prezzo con nessuno sconto tra i 18 ed i 65 anni
-    else if (age >= 18 && age <= 65){
-        console.log("Il costo del biglietto è di €" + initialCost.toFixed(2))
-    }
-    
-    
+        
     
 // prezzo con sconto del 40% per gli over 65
     
-    else{
+    else if (age > 65){
         discount = initialCost*0.40 //number
         console.log("Lo sconto applicato è di € " + discount.toFixed(2))
         finalCost = initialCost-discount //number
-        console.log("Il costo del biglietto, con sconto applicato è di €" + finalCost.toFixed(2))
+        console.log("Il costo del biglietto, con sconto applicato, è di €" + finalCost.toFixed(2))
      
     }
 
