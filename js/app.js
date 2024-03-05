@@ -78,7 +78,7 @@ inputSubmitElement.addEventListener("click", function(){
 // costo del biglietto con ipotetico sconto
 
 // prezzo con sconto del 20% per i minorenni
-    if(age < 18){
+    if(age == "minorenne"){
         let discount = initialCost*0.20 //number
         console.log("Lo sconto applicato è di € " + discount.toFixed(2))
         let finalCost = initialCost-discount //number
@@ -89,7 +89,7 @@ inputSubmitElement.addEventListener("click", function(){
     
 // prezzo con sconto del 40% per gli over 65
     
-    else if (age > 65){
+    else if(age == "over-65"){
         discount = initialCost*0.40 //number
         console.log("Lo sconto applicato è di € " + discount.toFixed(2))
         finalCost = initialCost-discount //number
