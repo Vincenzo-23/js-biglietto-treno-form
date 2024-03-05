@@ -34,7 +34,7 @@ inputSubmitElement.addEventListener("click", function(){
         console.log("Lo sconto applicato è di € " + discount.toFixed(2))
         // prezzo finale con sconto del 20% per i minorenni
         let finalCost = initialCost-discount //number
-        console.log("Il prezzo del biglietto, con sconto applicato, è di €" + finalCost.toFixed(2))
+        console.log("Il prezzo finale del biglietto è di €" + finalCost.toFixed(2))
 
         // stampo in pagina l'ammontare dello sconto
         let discountAmount = document.getElementById("discount_amount")
@@ -50,7 +50,7 @@ inputSubmitElement.addEventListener("click", function(){
         console.log("Lo sconto applicato è di € " + discount.toFixed(2))
         // prezzo finale con sconto del 40% per gli over 65
         finalCost = initialCost-discount //number
-        console.log("Il prezzo del biglietto, con sconto applicato, è di €" + finalCost.toFixed(2))
+        console.log("Il prezzo finale del biglietto è di €" + finalCost.toFixed(2))
 
         // stampo in pagina l'ammontare dello sconto
         let discountAmount = document.getElementById("discount_amount")
@@ -66,7 +66,7 @@ inputSubmitElement.addEventListener("click", function(){
         console.log("Lo sconto applicato è di € " + discount.toFixed(2))
         // prezzo finale con sconto pari a 0
         finalCost = initialCost-discount //number
-        console.log("Il prezzo del biglietto è di €" + finalCost.toFixed(2))
+        console.log("Il prezzo finale del biglietto è di €" + finalCost.toFixed(2))
 
         // stampo in pagina l'ammontare dello sconto
         let discountAmount = document.getElementById("discount_amount")

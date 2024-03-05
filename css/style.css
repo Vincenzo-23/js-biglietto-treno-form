@@ -1,0 +1,35 @@
+/* RESET */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    border: none;
+}
+
+.custom_button{
+    color: white;
+    background-color: rgb(0, 119, 255);
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+
+/* Utilities */
+
+.bg_beige {
+    background-color: beige;
+}
+
+.bg_orange{
+    background-color: rgb(238, 156, 3);
+    border-radius: 20px;
+}
+
+.custom_font{
+    font-size: 24px;
+    font-weight: 700;
+}
