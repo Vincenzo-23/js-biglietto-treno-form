@@ -33,3 +33,10 @@ button{
     font-size: 24px;
     font-weight: 700;
 }
+
+/* Layout */
+
+main{
+    padding: 50px 0;
+}
+
